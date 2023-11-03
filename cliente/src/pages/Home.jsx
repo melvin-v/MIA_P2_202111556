@@ -54,7 +54,7 @@ function Home() {
     setExit("Ejecutando...");
     const data = { entry: text }
     //http://3.88.65.124:8000//api-execute
-    fetch(`http://localhost:8000//api-execute`, {
+    fetch(`http://127.0.0.1:8000/api-execute`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ function Home() {
       <div style={{ width: "80%",  padding: 10, margin: "auto", marginTop: 20 }}>
 
      
-<Button variant="contained" component="label" startIcon={<CloudUploadIcon />}>
+<Button variant="contained" component="label" startIcon={<CloudUploadIcon />} onChange={handleFileChange}>
   Upload file
   <VisuallyHiddenInput type="file" />
 </Button>
